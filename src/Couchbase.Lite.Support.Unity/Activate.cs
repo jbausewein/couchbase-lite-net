@@ -39,6 +39,7 @@ namespace Couchbase.Lite.Support
         #region Variables
 
         private static AtomicBool _Activated;
+        private static AtomicBool _Ready;
 
         #endregion
 
@@ -104,27 +105,20 @@ namespace Couchbase.Lite.Support
             Service.AutoRegister(typeof(Unity).GetTypeInfo().Assembly);
             Service.Register<ILiteCore>(new LiteCoreImpl());
             Service.Register<ILiteCoreRaw>(new LiteCoreRawImpl());
+            _Ready.Set(true);
         }
 
-        /// <summary>
-        /// Turns on text based logging for debugging purposes.  The logs will be written 
-        /// to the directory specified in <paramref name="directoryPath"/>
-        /// </summary>
-        /// <param name="directoryPath">The directory to write logs to</param>
-        [ContractAnnotation("null => halt")]
         public static void EnableTextLogging(string directoryPath)
         {
             Log.EnableTextLogging(new FileLogger(directoryPath));
         }
 
-        /// <summary>
-        /// Directs the binary log files to write to the specified directory.  Useful if
-        /// the default directory does not have write permission.
-        /// </summary>
-        /// <param name="directoryPath">The path to write binary logs to</param>
-        public static void SetBinaryLogDirectory(string directoryPath)
+        public static void ExecuteTasks()
         {
-            Log.BinaryLogDirectory = directoryPath;
+            if (_Ready)
+            {
+                Native.c4_executeTasks();
+            }
         }
 
         #endregion

@@ -43,6 +43,7 @@ namespace LiteCore.Interop
         string c4_getVersion();
         int c4_getObjectCount();
         void c4_dumpInstances();
+        void c4_executeTasks();
         bool c4blob_keyFromString(string str, C4BlobKey* x);
         string c4blob_keyToString(C4BlobKey key);
         C4BlobStore* c4db_getBlobStore(C4Database* db, C4Error* outError);

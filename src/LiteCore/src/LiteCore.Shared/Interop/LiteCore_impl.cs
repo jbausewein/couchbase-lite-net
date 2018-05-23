@@ -41,6 +41,7 @@ namespace LiteCore.Interop
         public string c4_getVersion() => Native.c4_getVersion();
         public int c4_getObjectCount() => Native.c4_getObjectCount();
         public void c4_dumpInstances() => Native.c4_dumpInstances();
+        public void c4_executeTasks() => Native.c4_executeTasks();
         public bool c4blob_keyFromString(string str, C4BlobKey* x) => Native.c4blob_keyFromString(str, x);
         public string c4blob_keyToString(C4BlobKey key) => Native.c4blob_keyToString(key);
         public C4BlobStore* c4db_getBlobStore(C4Database* db, C4Error* outError) => Native.c4db_getBlobStore(db, outError);

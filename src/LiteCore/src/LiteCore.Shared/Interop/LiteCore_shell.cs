@@ -43,6 +43,7 @@ namespace Couchbase.Lite.Interop
         public static string c4_getVersion() => Impl.c4_getVersion();
         public static int c4_getObjectCount() => Impl.c4_getObjectCount();
         public static void c4_dumpInstances() => Impl.c4_dumpInstances();
+        public static void c4_executeTasks() => Impl.c4_executeTasks();
         public static bool c4blob_keyFromString(string str, C4BlobKey* x) => Impl.c4blob_keyFromString(str, x);
         public static string c4blob_keyToString(C4BlobKey key) => Impl.c4blob_keyToString(key);
         public static C4BlobStore* c4db_getBlobStore(C4Database* db, C4Error* outError) => Impl.c4db_getBlobStore(db, outError);
