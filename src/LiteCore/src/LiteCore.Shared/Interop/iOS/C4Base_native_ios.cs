@@ -117,7 +117,8 @@ namespace LiteCore.Interop
         [DllImport(Constants.DllNameIos, CallingConvention = CallingConvention.Cdecl)]
         public static extern void c4_dumpInstances();
 
-
+        [DllImport(Constants.DllNameIos, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void c4_executeTasks();
     }
 
     internal unsafe static partial class NativeRaw

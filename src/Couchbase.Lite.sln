@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Couchbase.Lite.Support.UWP", "Couchbase.Lite.Support.UWP\Couchbase.Lite.Support.UWP.csproj", "{E0AE6111-4039-4DB9-A1D9-21D6F92C4A6A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Couchbase.Lite", "Couchbase.Lite\Couchbase.Lite.csproj", "{1CF95F79-7649-4FDA-A888-73B5C69316FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Couchbase.Lite", "Couchbase.Lite\Couchbase.Lite.csproj", "{1CF95F79-7649-4FDA-A888-73B5C69316FC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Support", "Support", "{28E65856-03A7-4D96-A20A-B2EBC384F335}"
 EndProject
@@ -13,13 +13,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Couchbase.Lite.Support.Andr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Couchbase.Lite.Support.iOS", "Couchbase.Lite.Support.Apple\iOS\Couchbase.Lite.Support.iOS.csproj", "{3D634C07-2603-4474-A8CD-DE0CF495307C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Couchbase.Lite.Support.NetDesktop", "Couchbase.Lite.Support.NetDesktop\Couchbase.Lite.Support.NetDesktop.csproj", "{7C58D058-8DCE-42FB-8386-5A62BA8CC971}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Couchbase.Lite.Support.NetDesktop", "Couchbase.Lite.Support.NetDesktop\Couchbase.Lite.Support.NetDesktop.csproj", "{7C58D058-8DCE-42FB-8386-5A62BA8CC971}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Couchbase.Lite.Shared", "Couchbase.Lite.Shared\Couchbase.Lite.Shared.shproj", "{9B92B9D6-5DD3-477A-883B-1B40D5DEEF3B}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LiteCore.Shared", "LiteCore\src\LiteCore.Shared\LiteCore.Shared.shproj", "{C37DC024-8762-4BE4-9034-B2B5970C652C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Couchbase.Lite.Support.Unity", "Couchbase.Lite.Support.Unity\Couchbase.Lite.Support.Unity.csproj", "{9A8FCC57-0ACE-4D7C-AEE8-7C9104046E4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Couchbase.Lite.Support.Unity", "Couchbase.Lite.Support.Unity\Couchbase.Lite.Support.Unity.csproj", "{9A8FCC57-0ACE-4D7C-AEE8-7C9104046E4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Couchbase.Lite.Support.Unity.iOS", "Couchbase.Lite.Support.Apple\iOS\Couchbase.Lite.Support.Unity.iOS.csproj", "{1DE13C9F-580D-45EB-BF45-AA3355C895C9}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -159,6 +161,30 @@ Global
 		{9A8FCC57-0ACE-4D7C-AEE8-7C9104046E4C}.Release|x64.Build.0 = Release|Any CPU
 		{9A8FCC57-0ACE-4D7C-AEE8-7C9104046E4C}.Release|x86.ActiveCfg = Release|Any CPU
 		{9A8FCC57-0ACE-4D7C-AEE8-7C9104046E4C}.Release|x86.Build.0 = Release|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Debug|ARM.Build.0 = Debug|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Debug|x64.Build.0 = Debug|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Debug|x86.Build.0 = Debug|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Packaging|Any CPU.ActiveCfg = Packaging|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Packaging|Any CPU.Build.0 = Packaging|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Packaging|ARM.ActiveCfg = Packaging|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Packaging|ARM.Build.0 = Packaging|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Packaging|x64.ActiveCfg = Packaging|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Packaging|x64.Build.0 = Packaging|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Packaging|x86.ActiveCfg = Packaging|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Packaging|x86.Build.0 = Packaging|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Release|ARM.ActiveCfg = Release|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Release|ARM.Build.0 = Release|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Release|x64.ActiveCfg = Release|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Release|x64.Build.0 = Release|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Release|x86.ActiveCfg = Release|Any CPU
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -169,6 +195,7 @@ Global
 		{3D634C07-2603-4474-A8CD-DE0CF495307C} = {28E65856-03A7-4D96-A20A-B2EBC384F335}
 		{7C58D058-8DCE-42FB-8386-5A62BA8CC971} = {28E65856-03A7-4D96-A20A-B2EBC384F335}
 		{9A8FCC57-0ACE-4D7C-AEE8-7C9104046E4C} = {28E65856-03A7-4D96-A20A-B2EBC384F335}
+		{1DE13C9F-580D-45EB-BF45-AA3355C895C9} = {28E65856-03A7-4D96-A20A-B2EBC384F335}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3C38B32F-81DB-4CC7-A859-9F58E50B9BAB}

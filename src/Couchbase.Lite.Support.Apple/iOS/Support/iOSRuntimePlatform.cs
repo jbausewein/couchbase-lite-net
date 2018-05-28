@@ -16,11 +16,12 @@
 // limitations under the License.
 // 
 using Couchbase.Lite.DI;
-using Foundation;
-using UIKit;
+//using Foundation;
+//using UIKit;
 
 namespace Couchbase.Lite.Support
 {
+    /*
     [CouchbaseDependency]
 	internal sealed class iOSRuntimePlatform : IRuntimePlatform
 	{
@@ -28,4 +29,5 @@ namespace Couchbase.Lite.Support
 
 		public string HardwareName => UIDevice.CurrentDevice.Model;
 	}
+	*/
 }

@@ -22,9 +22,6 @@ using System.IO;
 using Couchbase.Lite.DI;
 using Couchbase.Lite.Logging;
 using Couchbase.Lite.Util;
-
-using Foundation;
-
 using LiteCore.Interop;
 
 namespace Couchbase.Lite.Support

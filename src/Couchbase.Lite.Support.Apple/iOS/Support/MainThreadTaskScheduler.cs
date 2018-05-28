@@ -23,10 +23,11 @@ using System.Threading.Tasks;
 using Couchbase.Lite.DI;
 using Couchbase.Lite.Logging;
 
-using Foundation;
+//using Foundation;
 
 namespace Couchbase.Lite.Support
 {
+    /*
     [CouchbaseDependency(Lazy = true, Transient = true)]
     internal sealed class MainThreadTaskScheduler : TaskScheduler, IMainThreadTaskScheduler
     {
@@ -76,4 +77,5 @@ namespace Couchbase.Lite.Support
 
         #endregion
     }
+    */
 }

@@ -43,5 +43,6 @@ using System.Runtime.CompilerServices;
 [assembly: InternalsVisibleTo("Couchbase.Lite.Tests.Android")]
 [assembly: InternalsVisibleTo("Couchbase.Lite.Support.NetDesktop")]
 [assembly: InternalsVisibleTo("Couchbase.Lite.Support.Unity")]
+[assembly: InternalsVisibleTo("Couchbase.Lite.Support.Unity.iOS")]
 [assembly: InternalsVisibleTo("Couchbase.Lite.Tests.NetCore")]
 #endif

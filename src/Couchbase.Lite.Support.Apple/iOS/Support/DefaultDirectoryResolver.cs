@@ -17,7 +17,7 @@
 //
 using System.IO;
 using Couchbase.Lite.DI;
-using Foundation;
+//using Foundation;
 
 namespace Couchbase.Lite.Support
 {
@@ -26,6 +26,7 @@ namespace Couchbase.Lite.Support
     {
         public string DefaultDirectory()
         {
+        /*
 #if __TVOS__
             var dirID = NSSearchPathDirectory.CachesDirectory;
 #else
@@ -40,6 +41,8 @@ namespace Couchbase.Lite.Support
             path = Path.Combine(path, bundleID);
 #endif
             return Path.Combine(path, "CouchbaseLite");
+            */
+            return "";
         }
     }
 }
