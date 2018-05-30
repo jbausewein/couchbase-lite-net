@@ -24,6 +24,13 @@ namespace Couchbase.Lite.Support
     [CouchbaseDependency]
     internal sealed class DefaultDirectoryResolver : IDefaultDirectoryResolver
     {
+        private string path;
+
+        public DefaultDirectoryResolver(string path)
+        {
+            this.path = path;
+        }
+
         public string DefaultDirectory()
         {
         /*
@@ -40,9 +47,8 @@ namespace Couchbase.Lite.Support
             Debug.Assert(bundleID != null, "No bundle ID");
             path = Path.Combine(path, bundleID);
 #endif
+*/
             return Path.Combine(path, "CouchbaseLite");
-            */
-            return "";
         }
     }
 }

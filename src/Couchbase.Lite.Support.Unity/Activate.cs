@@ -48,7 +48,7 @@ namespace Couchbase.Lite.Support
         /// <summary>
         /// Activates the support classes for .NET Core / .NET Framework
         /// </summary>
-        public static void Activate()
+        public static void Activate(string defaultDirectory)
         {
             if (_Activated.Set(true)) {
                 return;

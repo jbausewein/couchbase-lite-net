@@ -18,51 +18,86 @@
 
 using System;
 using System.IO;
-
+using System.Runtime.InteropServices;
 using Couchbase.Lite.DI;
 using Couchbase.Lite.Logging;
 using Couchbase.Lite.Util;
+using LiteCore;
 using LiteCore.Interop;
+using ObjCRuntime;
+
+namespace LiteCore.Interop
+{
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    internal delegate void C4UnityCallback(C4Socket socket, C4Address address, C4Slice options, C4LogDomain logDomain, C4Replicator replicator);
+}
 
 namespace Couchbase.Lite.Support
 {
     /// <summary>
     /// Support classes for Xamarin iOS
     /// </summary>
-    public static class iOS
-	{
-	    #region Variables
+    public static class Unity
+    {
+        #region Variables
 
-	    private static AtomicBool _Activated = false;
+        private static AtomicBool _Activated = false;
+        private static AtomicBool _Ready;
+        private static AtomicBool _Hack;
 
-	    #endregion
+        #endregion
 
-	    #region Public Methods
+        #region Public Methods
 
-	    /// <summary>
-		/// Activates the Xamarin iOS specific support classes
-		/// </summary>
-		public static void Activate()
-		{
-            if(_Activated.Set(true)) {
+        /// <summary>
+        /// Activates the Xamarin iOS specific support classes
+        /// </summary>
+        public static void Activate(string path)
+        {
+            if (_Activated.Set(true))
+            {
                 return;
             }
-            
-			Console.WriteLine("Loading support items");
-            Service.AutoRegister(typeof(iOS).Assembly);
+
+            Console.WriteLine("Loading support items");
+            Service.Register<IDefaultDirectoryResolver>(new DefaultDirectoryResolver(path));
             Service.Register<ILiteCore>(new LiteCoreImpl());
             Service.Register<ILiteCoreRaw>(new LiteCoreRawImpl());
-		}
 
-	    /// <summary>
-		/// Enables text based logging for debugging purposes.  Log statements will
-		/// be written to NSLog
-		/// </summary>
-		public static void EnableTextLogging()
-		{
-			Log.EnableTextLogging(new iOSDefaultLogger());
-		}
+            // hack for unity il2cpp 
+            if (_Hack)
+            {
+                Hack(Callback);
+            }
 
-	    #endregion
-	}
+            _Ready.Set(true);
+        }
+
+        public static void EnableTextLogging(string directoryPath)
+        {
+            Log.EnableTextLogging(new iOSDefaultLogger());
+        }
+
+        public static void ExecuteTasks()
+        {
+            if (_Ready)
+            {
+                Native.c4_executeTasks();
+            }
+        }
+
+        #endregion
+
+        #region Unity Hack
+
+        [MonoPInvokeCallback(typeof(C4UnityCallback))]
+        private static void Callback(C4Socket socket, C4Address address, C4Slice options, C4LogDomain logDomain, C4Replicator replicator)
+        {
+        }
+
+        [DllImport(Constants.DllNameIos, CallingConvention = CallingConvention.Cdecl)]
+        private static extern void Hack(C4UnityCallback callback);
+
+        #endregion
+    }
 }
