@@ -45,8 +45,7 @@
   <ItemGroup>
     <DotNetCliToolReference Include="dotnet-sourcelink" Version="2.1.2" />
     <DotNetCliToolReference Include="dotnet-sourcelink-git" Version="2.1.2" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="SimpleInjector" Version="4.3.0" />
+    <PackageReference Include="SimpleInjector" Version="4.0.12" />
   </ItemGroup>
 
   <ItemGroup>
@@ -68,6 +67,11 @@
     </Compile>
   </ItemGroup>
   
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>vendor\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <Import Project="..\Couchbase.Lite.Shared\Couchbase.Lite.Shared.projitems" Label="Shared" />
   
   <Import Project="..\LiteCore\src\LiteCore.Shared\LiteCore.Shared.projitems" Label="Shared" />
